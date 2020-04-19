@@ -46,7 +46,7 @@ public class Empresa {
         if (!planilla.removeIf(obj->{
             return (obj.getNombre()).equalsIgnoreCase(nombre);
         })) {
-            throw new NotExistingEmployedException("El empleado" + nombre + "no existe");
+            throw new NotExistingEmployedException("El empleado: " + EmpleadoDespe + " no existe");
         }
     }
     public void consultarEmpleados(){
