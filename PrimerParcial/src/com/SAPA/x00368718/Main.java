@@ -29,7 +29,6 @@ public class Main {
                         String nombre = JOptionPane.showInputDialog(null, "Ingrese el nombre del empleado : ");
                         String puesto = JOptionPane.showInputDialog(null, "Ingrese el puesto del empleado : ");
                         Double salario = Double.parseDouble(JOptionPane.showInputDialog(null, "Ingrese el salario del empleado : "));
-                        String nombreDocu = JOptionPane.showInputDialog(null, "Ingrese el nombre del documento  : ");
                         Opci2 = Integer.parseInt(JOptionPane.showInputDialog(null, opcionesTipo, "Opciones de Menu", JOptionPane.DEFAULT_OPTION));
                         //elegirOpcionTwo(Opci2);
                         switch (Opci2) {
@@ -71,26 +70,3 @@ public class Main {
         }
     }
 }
-    /*public static void elegirOpcion(String optiStr){
-        if(optiStr.equals("Salir")){
-            option =  0;
-        }else{
-            for(int i = 0; i < opciones.length; i++){
-                if(optiStr.equals(opciones[i])){
-                    option = i + 1;
-                }
-            }
-        }
-    }
-    public static void elegirOpcionTwo(String optiStr){
-        if(optiStr.equals("Salir")){
-            option2 =  0;
-        }else{
-            for(int i = 0; i < opciones.length; i++){
-                if(optiStr.equals(opciones[i])){
-                    option2 = i + 1;
-                }
-            }
-        }
-    }
-}*/
