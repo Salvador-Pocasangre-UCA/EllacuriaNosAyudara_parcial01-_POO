@@ -52,9 +52,21 @@ public class Main {
                         });
                         break;
                     case 4:
-                        miEmpresa.getPlanilla().forEach(s -> {
-                            JOptionPane.showMessageDialog(null, "Sueldo despues de renta de " + s.getNombre() + " : " + CalculadoraImpuestos.calcularPago(s));
-                        });
+                        boolean existe = false;
+                        String nombreBuscar = JOptionPane.showInputDialog(null, "Ingrese el nombre del empleado : ");
+                        for(Empleado emp : miEmpresa.getPlanilla()){
+                            if(emp.getNombre().equals(nombreBuscar))
+                                existe = true;
+                        }
+                        if(existe){
+                            miEmpresa.getPlanilla().forEach(s -> {
+                                if(s.getNombre().equals(nombreBuscar)){
+                                    JOptionPane.showMessageDialog(null, "Sueldo despues de renta de " + s.getNombre() + " : " + CalculadoraImpuestos.calcularPago(s));
+                                }
+                            });
+                        }else{
+                            throw new NotExistingEmployedException("No existe dicho empleado en la empresa");
+                        }
                         break;
                     case 5:
                         JOptionPane.showMessageDialog(null, CalculadoraImpuestos.mostrarTotales());
